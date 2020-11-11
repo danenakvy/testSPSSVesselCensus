@@ -9,8 +9,6 @@
 
 GET FILE='D:\0GDrive\Cambodia\FiADatabase\database\Data\ROfficial_All7552.sav'.
 
-
-
 *Table 2. Number of fishing vessels and none fishing vessel.
 ** Using ProCode as province predefine.
 FREQUENCIES  Pro.Code.
@@ -28,13 +26,8 @@ FREQUENCIES ProCensusNo.
 RECODE ProCensusNo ('Kk' = 'KK').
 FREQUENCIES ProCensusNo.
 
-
 ** check result both code.
 CROSSTABS ProCensusNo BY Province.
-
-
-
-
 
 
 *Table 2. Number of fishing vessels and none fishing vessel.
@@ -107,4 +100,9 @@ SELECT IF Sex < 12.
 LIST LineNo Annextype QID CensusNo  Enginepower Age Gender.
 
 
+***************************************.
+** continue to check other variables.
+***************************************.
+
+FREQUENCIES  Color.
 
