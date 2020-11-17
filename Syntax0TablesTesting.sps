@@ -36,6 +36,9 @@ CROSSTABS ProCensusNo BY Province.
 FREQUENCIES  Province.
 
 
+
+*Table 5. Marine fishing vessel classified by total length.
+*Table 5. Marine fishing vessel classified by total length.
 *Table 5. Marine fishing vessel classified by total length.
 FREQUENCIES Totallenght /HISTOGRAM NORMAL.
 
@@ -60,6 +63,8 @@ FREQUENCIES rcTotallenght rcTotallenght_50/BARCHART /PIECHART.
 
 
 *Table 6. Marine fishing vessel classify by total length classes.
+*Table 6. Marine fishing vessel classify by total length classes.
+*Table 6. Marine fishing vessel classify by total length classes.
 RECODE Totallenght (LO THRU 5.99=1 )  (6 THRU 11.99=2) (12 THRU 17.99=3)
  (18 THRU 23.99=4) (24 THRU HI=5) INTO  rcTotallenght_T6.
 VALUE LABELS rcTotallenght_T6
@@ -71,6 +76,28 @@ VALUE LABELS rcTotallenght_T6
 CROSSTABS rcTotallenght_T6 BY Province /BARCHART.
 
 CROSSTABS Province BY rcTotallenght_T6 /BARCHART.
+
+
+
+** Marine fishing vessels classify by small scale, medium and large scale. The active gears (Trawl and
+Blood cockle dragged) take out from below 12meter of total length of fishing vessels, added to
+medium scale vessels.
+
+**Table 7. Active fishing gear of fishing vessel of total length from 6 m - <12m, which be included in Middle scale.
+**Table 7. Active fishing gear of fishing vessel of total length from 6 m - <12m, which be included in Middle scale.
+**Table 7. Active fishing gear of fishing vessel of total length from 6 m - <12m, which be included in Middle scale.
+
+** the table 7 will provide basic information to adjust classification of vessel.
+
+FREQUENCIES
+    Typeoffinishinggearandsize
+    fishinggeartype1 fishinggeartype2.
+
+
+
+
+
+
 
 
 
