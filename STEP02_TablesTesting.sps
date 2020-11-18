@@ -94,13 +94,6 @@ FREQUENCIES
     fishinggeartype1 fishinggeartype2.
 
 
-
-
-
-
-
-
-
 ** Generate new tables.
 ** Generate new tables.
 FREQUENCIES  Age /HISTOGRAM NORMAL.

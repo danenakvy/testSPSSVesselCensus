@@ -1,19 +1,7 @@
 ﻿* Encoding: UTF-8.
 ** based on final dataset Based on 7552.
 
-
-GET DATA
-  /TYPE=XLSX
-  /FILE='D:\0GDrive\Cambodia\FiADatabase\database\Export\1_AllV_15ct2019_Final_2020.xlsx'
-  /SHEET=name 'AllDatasets'
-  /CELLRANGE=FULL
-  /READNAMES=ON.
-EXECUTE.
-ALTER TYPE vessel_owner_id (F18.0).
-SAVE OUTFILE='D:\0GDrive\Cambodia\FiADatabase\database\Data\ROfficial_All7552.sav'.
-
-FREQUENCIES Annextype  CensusNo Enginepower NameVesselOwnerKH.
-
+INSERT FILE ='D:\0GDrive\Cambodia\FiADatabase\database\data\testSPSSVesselCensus\STEP00_ConvertBaseFinalData7552.sps'.
 
 
 *************************************************************.
@@ -29,7 +17,7 @@ FREQUENCIES Annextype  CensusNo Enginepower NameVesselOwnerKH.
 ******** if i run with qid as basis.
 ******** if i run with qid as basis.
 
-GET FILE='D:\0GDrive\Cambodia\FiADatabase\database\Data\ROfficial_All7552.sav'.
+ * GET FILE='D:\0GDrive\Cambodia\FiADatabase\database\Data\ROfficial_All7552.sav'.
 
 ** Identify error douplicate.
 SORT CASES BY Annextype(A) CensusNo(A)  Enginepower(A)  QID(A).
@@ -59,13 +47,7 @@ VARIABLE LEVEL  PrimaryLast (ORDINAL).
 FREQUENCIES PrimaryLast.
 EXECUTE.
 
-** all dataset with paire and duplicate.
-SELECT IF InDupGrp =1.
-EXECUTE.
-
-
-
-
+** the result  no any duplicate base on these.
 
 
 *************************************************************.
@@ -106,12 +88,14 @@ EXECUTE.
 ** all dataset with paire and duplicate.
 SELECT IF InDupGrp =1.
 EXECUTE.
- * SAVE TRANSLATE OUTFILE='D:\0GDrive\Cambodia\FiADatabase\database\data\zChekDuplicate_AllDataset.xlsx' 
+SAVE TRANSLATE OUTFILE='D:\0GDrive\Cambodia\FiADatabase\database\data\zChekDuplicate_33Dataset.xlsx' 
   /TYPE=XLS 
   /VERSION=12 
   /FIELDNAMES VALUE=NAMES 
   /CELLS=LABELS 
   /REPLACE.
+
+
 
 
 
@@ -152,7 +136,7 @@ EXECUTE.
 ** all dataset with paire and duplicate.
 SELECT IF InDupGrp =1.
 EXECUTE.
- * SAVE TRANSLATE OUTFILE='D:\0GDrive\Cambodia\FiADatabase\database\data\zChekDuplicate_AllDataset.xlsx' 
+SAVE TRANSLATE OUTFILE='D:\0GDrive\Cambodia\FiADatabase\database\data\zChekDuplicate_52Dataset.xlsx' 
   /TYPE=XLS 
   /VERSION=12 
   /FIELDNAMES VALUE=NAMES 
