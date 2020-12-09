@@ -85,6 +85,7 @@ GET DATA
   /CELLRANGE=FULL
   /READNAMES=ON.
 EXECUTE.
+FORMATS interview_village_id (F8.0).
 SAVE OUTFILE='D:\0GDrive\Cambodia\FiADatabase\database\Data\ServerVesselCensus.sav'.
 
 

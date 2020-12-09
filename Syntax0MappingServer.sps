@@ -7,16 +7,9 @@
 
 *************************************************************.
 GET FILE = 'D:\0GDrive\Cambodia\FiADatabase\database\data\ServerVesselCensus.sav'.
-** Get master List.
-GET DATA
-  /TYPE=XLSX
-  /FILE='D:\0GDrive\Cambodia\FiADatabase\database\Export\ServerDataRetrieved.xlsx'
-  /SHEET=name 'tbl_master'
-  /CELLRANGE=FULL
-  /READNAMES=ON.
-EXECUTE.
 
-FORMATS village_id (F8.0).
+
+
 SAVE OUTFILE='D:\0GDrive\Cambodia\FiADatabase\database\Data\ServerVesselCensusMasterList.sav'.
 
 

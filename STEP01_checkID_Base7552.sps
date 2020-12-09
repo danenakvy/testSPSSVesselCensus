@@ -17,7 +17,7 @@ INSERT FILE ='D:\0GDrive\Cambodia\FiADatabase\database\data\testSPSSVesselCensus
 ******** if i run with qid as basis.
 ******** if i run with qid as basis.
 
- * GET FILE='D:\0GDrive\Cambodia\FiADatabase\database\Data\ROfficial_All7552.sav'.
+GET FILE='D:\0GDrive\Cambodia\FiADatabase\database\Data\ROfficial_All7552.sav'.
 
 ** Identify error douplicate.
 SORT CASES BY Annextype(A) CensusNo(A)  Enginepower(A)  QID(A).
@@ -58,10 +58,10 @@ EXECUTE.
 
 GET FILE='D:\0GDrive\Cambodia\FiADatabase\database\Data\ROfficial_All7552.sav'.
 
-SORT CASES BY Annextype(A) CensusNo(A)  Enginepower(A)  NameVesselOwnerKH(A).
+SORT CASES BY Annextype(A) CensusNo(A)  Enginepower(A)  Name_OwnerKh(A).
 MATCH FILES
   /FILE=*
-  /BY Annextype CensusNo Enginepower NameVesselOwnerKH
+  /BY Annextype CensusNo Enginepower Name_OwnerKh
   /FIRST=PrimaryFirst
   /LAST=PrimaryLast.
 EXECUTE.
@@ -145,7 +145,14 @@ SAVE TRANSLATE OUTFILE='D:\0GDrive\Cambodia\FiADatabase\database\data\zChekDupli
 
 
 
-*** the conclusion for now, using first one option.
-**Reason possible they can have same name, same colore, same machine but diff.
+
+**************************************************************************************************.
+*** the conclusion for now, using first one option.******************************************.
+**Reason possible they can have same name, same colore, same machine but diff.**.
+**************************************************************************************************.
+** let convert to Excel back with new name.
+
+GET FILE='D:\0GDrive\Cambodia\FiADatabase\database\Data\ROfficial_All7552.sav'.
+
 
 
