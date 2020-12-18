@@ -64,21 +64,28 @@ SAVE TRANSLATE OUTFILE='D:\0GDrive\Cambodia\FiADatabase\database\data\zChek31Pro
 *Server*************************************************************.
 *Server*************************************************************.
 *Server*************************************************************.
+
+
+
+*************************************************************.
+*** STEP1. work for 4 key varis OfficialStatistics (QID) replace by name..
+*** STEP1. work for 4 key varisOfficialStatistics (QID) replace by name.
+**Annextype(A) CensusNo(A)  Enginepower(A)  QID(A).
+
+
+
 **Server with MasterList.
 GET FILE='D:\0GDrive\Cambodia\FiADatabase\database\Data\ServerVesselCensus.sav'
     /KEEP autoID recorder_id questionaire_id   
-      vessel_owner_id vessel_id  master_id 
-     date_census annex_type  interview_village_id census_no.
-
-COMPUTE village_code = interview_village_id.
-FORMATS interview_village_id village_code (F8.0).
+      date_census annex_type  interview_village_id census_no vessel_owner_id vessel_id master_id power_vessel.
+FORMATS interview_village_id (F8.0).
 
 
 ** Identify error douplicate.
-SORT CASES BY annex_type(A) interview_village_id(A) census_no(A).
+SORT CASES BY annex_type(A) interview_village_id(A) census_no(A) power_vessel(A).
 MATCH FILES
   /FILE=*
-  /BY annex_type  interview_village_id census_no
+  /BY annex_type  interview_village_id census_no power_vessel
   /FIRST=PrimaryFirst
   /LAST=PrimaryLast.
 EXECUTE.

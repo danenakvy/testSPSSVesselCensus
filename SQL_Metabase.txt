@@ -1,0 +1,25 @@
+** metabase SQL
+
+===========
+-01Table
+===========
+SELECT 
+ distinct Provincial,
+ count (*)
+FROM v2018maindata
+GROUP BY Provincial
+
+
+
+Using Online and connecting to FormTools
+===========
+-01Table
+===========
+SELECT 
+ distinct Provincial,
+ count (*)
+FROM ft_vesselform_3
+GROUP BY Provincial
+
+
+

@@ -78,6 +78,9 @@ SAVE OUTFILE='D:\0GDrive\Cambodia\FiADatabase\database\Data\ServerVesselCensusTy
 
 **Data5 Main Dataset**********************************************************************.
 **Data5 Main Dataset**********************************************************************.
+** based on discussion with SamAth 10Dec2020 and MrRoitana, we cant update any
+the purpose of this data for tax registration, work on key prioritize field and merge base cenus.
+
 GET DATA
   /TYPE=XLSX
   /FILE='D:\0GDrive\Cambodia\FiADatabase\database\Export\ServerDataRetrieved.xlsx'
